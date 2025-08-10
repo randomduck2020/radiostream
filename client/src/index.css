@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(210 25% 7.8431%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(210 25% 7.8431%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(210 25% 7.8431%);
+  --primary: hsl(207.2727 87.4251% 43.1373%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(332.3077 85.9649% 64.9020%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(240 1.9608% 90%);
+  --muted-foreground: hsl(210 25% 7.8431%);
+  --accent: hsl(240 4.7619% 96.2745%);
+  --accent-foreground: hsl(210 25% 7.8431%);
+  --destructive: hsl(0 84.2105% 60.1961%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(214.2857 31.7647% 91.3725%);
+  --input: hsl(214.2857 31.7647% 91.3725%);
+  --ring: hsl(207.2727 87.4251% 43.1373%);
+  --chart-1: hsl(207.2727 87.4251% 43.1373%);
+  --chart-2: hsl(159.7826 100% 36.0784%);
+  --chart-3: hsl(42.0290 92.8251% 56.2745%);
+  --chart-4: hsl(147.1429 78.5047% 41.9608%);
+  --chart-5: hsl(341.4894 75.2000% 50.9804%);
+  --sidebar: hsl(0 0% 100%);
+  --sidebar-foreground: hsl(210 25% 7.8431%);
+  --sidebar-primary: hsl(207.2727 87.4251% 43.1373%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(240 4.7619% 96.2745%);
+  --sidebar-accent-foreground: hsl(210 25% 7.8431%);
+  --sidebar-border: hsl(214.2857 31.7647% 91.3725%);
+  --sidebar-ring: hsl(207.2727 87.4251% 43.1373%);
+  --font-sans: 'Roboto', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 0.5rem;
+  --surface: hsl(0 0% 100%);
+  --background-surface: hsl(240 4.7619% 96.2745%);
+  --error: hsl(0 84.2105% 60.1961%);
+  --primary-dark: hsl(213.9130 89.4737% 38.8235%);
+}
+
+.dark {
+  --background: hsl(0 0% 0%);
+  --foreground: hsl(200 6.6667% 91.1765%);
+  --card: hsl(228 9.8039% 10%);
+  --card-foreground: hsl(0 0% 85.0980%);
+  --popover: hsl(0 0% 0%);
+  --popover-foreground: hsl(200 6.6667% 91.1765%);
+  --primary: hsl(207.2727 87.4251% 43.1373%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(332.3077 85.9649% 64.9020%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(0 0% 9.4118%);
+  --muted-foreground: hsl(210 3.3898% 46.2745%);
+  --accent: hsl(205.7143 70% 7.8431%);
+  --accent-foreground: hsl(203.7736 87.6033% 52.5490%);
+  --destructive: hsl(0 84.2105% 60.1961%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(210 5.2632% 14.9020%);
+  --input: hsl(207.6923 27.6596% 18.4314%);
+  --ring: hsl(207.2727 87.4251% 43.1373%);
+  --surface: hsl(228 9.8039% 10%);
+  --background-surface: hsl(0 0% 9.4118%);
+  --error: hsl(0 84.2105% 60.1961%);
+  --primary-dark: hsl(213.9130 89.4737% 38.8235%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    min-height: 100vh;
+  }
+
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: hsl(var(--primary));
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: hsl(var(--primary));
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+}
